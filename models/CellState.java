@@ -1,5 +1,5 @@
 package models;
 
 public enum CellState {
-    empty, filled, blocked
+    EMPTY, FILLED, BLOCKED
 }

@@ -5,10 +5,19 @@ import models.Move;
 import models.Player;
 
 public class game {
-    Board board;
-    List<Player> players;
-    int nextPlayerIndex;
-    Player winner;
-    List<Move> moves;
-    GameState gamestate;
+    private Board board;
+    private List<Player> players;
+    private int nextPlayerIndex;
+    private Player winner;
+    private List<Move> moves;
+    private GameState gamestate;
+
+    public game (int dimension, List<Player> players) {
+        this.board = new Board(dimension);
+        this.players = players;
+        this.nextPlayerIndex = 0;
+        this.winner = null;
+        this.moves = new ArrayList<>();
+        this.gamestate = GameState.inProgress;
+    }
 }
